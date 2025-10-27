@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mehtab Singh Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="extraa.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <a href="#" class="logo">Mehtab Singh</a>
+
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <nav>
+      <a href="#home" class="active">Home</a>
+      <a href="#education">Education</a>
+      <a href="#experience">Experience</a>
+      <a href="#services">Services</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home" class="home">
+    <div class="home-img">
+      <img src="mehtab.jpg" alt="Mehtab Singh">
+    </div>
+
+    <div class="home-content">
+      <h1>Hello, I am <span>Mehtab Singh</span></h1>
+      <h3 class="typing-text">I am a <span></span></h3>
+      <p>Welcome to my portfolio website. Here you can find information about my education, experience, skills, and services I offer.</p>
+
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/mehtab-sandhu-703497369/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://github.com/MehtabSandhu11" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+        <a href="mehtabsandhu0028@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education">
+    <h2>Education</h2>
+    <h1>
+      COMPLETED:<br><br>
+      Finished 10th from CBSE Board with 95%<br><br>
+      Finished 10+2 from CBSE Board in PCM with 86%<br><br><br>
+      ONGOING:<br><br>
+      B.Tech in Electronics and Communication Engineering<br>
+      Guru Nanak Dev University, Amritsar (2025–29)<br>
+      CGPA: — (Pursuing)<br><br>
+      Additional Courses:<br>
+      AI & Machine Learning Certification, IIT Ropar (2024–2025)
+    </h1>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience">
+    <h2>Experience</h2>
+    <h1>
+      - Worked on a Patient Database using NumPy in Python<br><br>
+      - Worked on developing a web application using HTML, CSS, and JavaScript.
+    </h1>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services">
+    <h2>Services</h2>
+    <h3>
+      AI & Machine Learning Solutions — Designing and developing intelligent systems for data analysis, automation, and prediction.<br><br><br>
+      Web & App Development — Creating responsive, user-friendly websites and simple applications using modern technologies.<br><br><br>
+      Python Automation & Scripting — Building tools and scripts to simplify workflows and enhance efficiency.<br><br><br>
+      Project Guidance & Consulting — Assisting students or startups in planning and implementing tech-based projects.<br><br><br>
+      IoT & Embedded Systems — Exploring smart hardware-software integrations for real-world applications.<br><br><br>
+      Tech Documentation & Reports — Writing clear, visually rich documentation for academic or professional projects.<br><br><br>
+      My goal is to blend creativity with technology — turning ideas into functional, impactful, and future-ready solutions.
+    </h3>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <p>
+      <b>Programming & Development:</b> Python, C/C++, HTML, CSS, JavaScript, SQL<br><br>
+      <b>AI & Machine Learning:</b> Data Analysis, Model Training, Neural Networks, Computer Vision, Scikit-learn, TensorFlow (basic)<br><br>
+      <b>Electronics & Engineering:</b> Circuit Design, Microcontrollers (Arduino, Raspberry Pi), Sensors & IoT Integration, MATLAB (basic)<br><br>
+      <b>Tools & Platforms:</b> VS Code, Google Colab, GitHub, Jupyter Notebook, Canva, MS Word, PowerPoint<br><br>
+      <b>Soft Skills:</b> Problem Solving, Team Collaboration, Creativity, Research, Communication<br><br>
+      <b>Languages:</b> English, Hindi, Punjabi<br><br>
+      Constantly learning and experimenting with new technologies to push the boundaries of what’s possible.
+    </p>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact</h2>
+    
+    
+    
+    <p><h3>
+      “I’m always open to exciting projects and collaborations that push boundaries. Drop me a message!”
+      <br><br>
+      📧 Email: mehtabsandhu0028@gmail.com<br><br>
+      💬 LinkedIn: linkedin.com/in/mehtab-sandhu-703497369<br><br>
+      💻 GitHub: github.com/MehtabSandhu11<br><br>
+      📍 Location: Amritsar, Punjab, India
+    </h3>
+    </p>
+  </section>
+
+  <!-- JavaScript -->
+  <script>
+    // Hamburger toggle
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('nav');
+    hamburger.addEventListener('click', () => {
+      nav.classList.toggle('active');
+      hamburger.classList.toggle('open');
+    });
+
+    // Scroll-based active link
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('nav a');
+    const headerHeight = document.querySelector('header').offsetHeight;
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      const scrollY = window.pageYOffset;
+
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - headerHeight - 10;
+        const sectionHeight = section.offsetHeight;
+        if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) {
+          link.classList.add('active');
+        }
+      });
+    });
+
+    // Smooth scroll
+    navLinks.forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const targetId = link.getAttribute('href').substring(1);
+        const targetSection = document.getElementById(targetId);
+        const sectionTop = targetSection.offsetTop - headerHeight;
+
+        window.scrollTo({
+          top: sectionTop,
+          behavior: 'smooth'
+        });
+
+        if (nav.classList.contains('active')) {
+          nav.classList.remove('active');
+          hamburger.classList.remove('open');
+        }
+      });
+    });
+
+    // Fade-in on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    sections.forEach(section => observer.observe(section));
+  </script>
+
+</body>
+</html>
+
